@@ -19,6 +19,11 @@ public class Filme extends Midia {
 
     @Override
     public void exibirInformacoes() {
+        System.out.println(" Filme:");
+        System.out.println("Título: " + getTitulo());
+        System.out.println("Gênero: " + getGenero());
+        System.out.println("Ano de lançamento: " + getAnoLancamento());
+        System.out.println("Diretor: " + diretor);
 
     }
 

@@ -28,6 +28,27 @@ public class Catalogo {
     public void listarMidias() {
         if (midias.isEmpty()) {
             System.out.println("Nenhuma mídia cadastrada");
+        } else {
+            System.out.println(" Mídias no catálogo:");
+            for (Midia m : midias) {
+                m.exibirInformacoes();
+            }
+        }
+    }
+    public void buscarPorTitulo(String titulo) {
+        boolean incluso = false;
+        for (Midia m : midias) {
+            if (m.getTitulo().equalsIgnoreCase(titulo)) {
+                System.out.println("Mídia encontrada:");
+                m.exibirInformacoes();
+                incluso = true;
+                break;
+            }
+        }
+
+        if (!incluso) {
+            System.out.println("Mídia com título \"" + titulo + "\" não encontrada.");
         }
     }
 }
+
